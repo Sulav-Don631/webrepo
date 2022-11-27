@@ -1,0 +1,31 @@
+/*Pesudo Classes*/
+input[type=submit]:hover{
+	background-color: chocolate;
+	color: lavender;
+}
+
+input:focus{
+	background-color: beige;
+	color: black;
+}
+
+/*Pseudo Elements*/
+
+#first::before{
+	content: "It is before text";
+	color: chocolate;
+	background-color: royalblue;
+}
+#Second::after{
+	content: "It is after text";
+	color: white;
+	background-color: darkred;
+}
+p::first-line{
+	background-color: gold;
+}
+p::first-letter{
+	font-family: fantasy;
+	font-size: 50px;
+	color: darkred;
+}

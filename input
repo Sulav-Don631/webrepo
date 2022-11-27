@@ -1,0 +1,73 @@
+<html>
+<head>
+	New input types 
+</head>
+<body>
+	<br>
+	<br>
+	Date
+	<br>
+	<input type="date">
+	<br>
+	<br>
+	Datetime
+	<br>
+	<input type="Datetime">
+	<br>
+	<br>
+	DateTime-local
+	<br>
+	<input type="DateTime-local">
+	<br>
+	<br>
+	Month
+	<br>
+	<input type="Month">
+	<br>
+	<br>
+	Time
+	<br>
+	<input type="Time">
+	<br>
+	<br>
+	Week
+	<br>
+	<input type="Week">
+	<br>
+	<br>
+	Color
+	<br>
+	<input type="Color">
+	<br>
+	<br>
+	E-mail
+	<br>
+	<input type="E-mail">
+	<br>
+	<br>
+	Tel
+	<br>
+	<input type="Tel">
+	<br>
+	<br>
+	Search
+	<br>
+	<input type="Search">
+	<br>
+	<br>
+	Range
+	<br>
+	<input type="Range">
+	<br>
+	<br>
+	Number
+	<br>
+	<input type="Number">
+	<br>
+	<br>
+	Url
+	<br>
+	<input type="Uarl">
+
+</body>
+</html>

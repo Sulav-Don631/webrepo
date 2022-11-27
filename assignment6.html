@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Positioning Properties of CSS</title>
+	<style>
+		#parent1{
+		position: absolute;
+		border: 1px solid red;
+		top: 70px;
+		right: 15px;
+
+	}
+	#child1{
+		position: absolute;
+		border: 1px solid blue;
+		width: 300px;
+		height: 150px;
+
+
+	}
+	#parent2{
+		position: relative;
+		border: 1px solid green;
+		top: 400px;
+		width: 300px;
+		height: 200px;
+	}
+	#child2{
+		position: absolute;
+		border: 1px solid black;
+		top: 50px;
+		right: 13px;
+	}
+	</style>
+	
+</head>
+<body>
+<h1>Positioning Proporties</h1>
+<div id="parent1">
+	<div id="child1">
+		this is absolute
+	</div>
+	<div id="parent2">
+		<div id="child2">
+			this is relative
+		</div>
+	 </div>
+</div>
+</body>
+</html>

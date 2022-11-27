@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Box Model</title>
+	<style>
+		#content_box{
+			width: 200px;
+			margin: 10px;
+			border: 5px solid fuchsia;
+			padding: 10px;
+			height: 200px;
+			box-sizing: border-box;
+			background-color: red;
+		}
+		#border_box{
+			width: 200px;
+			margin: 10px;
+			border: 5px solid black;
+			padding: 10px;
+			height: 200px;
+			box-sizing: border-box;
+			background-color: red;		}
+	</style>
+</head>
+<body>
+	<h1> What is Css Box model? </h1>
+	<br>
+	<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.</p>
+	<br>
+	<br>
+	<div id="content_box">
+		<p align="center"> It is a Content Box. </p>
+	</div>
+	<div id="border_box">
+		<p align="center"> It is a Border Box. </p>
+	</div>
+</body>
+</html>
