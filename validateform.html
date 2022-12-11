@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Validation</title>
+</head>
+<style type="text/css">
+	.myDiv{
+		text-align: center;
+	}
+	#message{
+		text-align: center;
+	}
+</style>
+<body>
+	<h1 align="center">Customer Signup page</h1>
+	<form method='get' onsubmit=" return valid()">
+		<div id='message'></div>
+		<div class="myDiv">
+			Name: <input type="text" name='Full name' id='name' placeholder="Full name" onkeyup="namevalid()" >
+		</div>
+		<div class="myDiv">
+			Password: <input type="password" name="password" id='password' placeholder="Minimum eight characters" onkeyup="passvalid()">
+		</div>
+		<div class="myDiv">
+			E-mail: <input type="E-mail" name="E-mail" id='email' placeholder="example@example.com" onkeyup="emailvalid()">
+		</div>
+		<div class="myDiv">
+			Gender: <input type="radio" name="gender" value='male'>Male
+			<input type='radio' name="gender" value="female">Female
+		</div>
+		<div class="myDiv">
+			<label for="interest"> Interest: </label>
+			<select name='Interest' id='Interest'>
+				<option value="Football">Football</option>
+				<option value="Basketball">Basketball</option>
+				<option value="Cricket">Cricket</option>
+				<option value="Baseball">Baseball</option>
+
+			</select>
+		</div>
+		<br/>
+		<div class="myDiv">
+			<button>Signup</button>
+		</div>
+	</form>
+		<script type="text/javascript">
+
+			const regex_un= /^[A-Za-z ]{1,50}$/;
+			const regex_pass=/^[a-zA-Z0-9]{1,8}$/;
+			const regex_mail=/^(\s*|[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})$/;
+
+
+			function namevalid()
+			{
+				var nam= document.forms[0].elements[0];
+				var namm= nam.value;
+				var is_valid_name= regex_un.test(namm);
+								console.log(is_valid_name)
+				if(is_valid_name=== false)
+				{
+					nam.style.border='1px solid darkred';
+					document.getElementById('message').innerHTML='Name Error';
+
+				}
+				else
+				{
+					nam.style.border='';
+					document.getElementById('message').innerHTML='';
+				}
+			}
+
+			function passvalid()
+			{
+				var pass= document.forms[0].elements[1];
+				var p= pass.value;
+				var is_valid_pass= regex_pass.test(p);
+				if(is_valid_pass === false)
+				{
+					pass.style.border='1px solid red';
+					document.getElementById('message').innerHTML='Password Invalid';
+				} 
+				else
+				{
+					pss.style.border= '';
+					document.getElementById('message').innerHTML='';
+				}
+			}
+
+			function emailvalid()
+			{
+				var mail= document.forms[0].elements[2];
+				var mmail= mail.value;
+				var is_valid_mail= regex_mail.test(mmail);
+				if(is_valid_mail === false)
+				{
+					mail.style.border='1px solid red';
+					document.getElementById('message').innerHTML='E-mail Invalid';
+				} 
+				else
+				{
+					mail.style.border= '';
+					document.getElementById('message').innerHTML='';
+				}
+			}
+
+		function valid(){
+			// body...
+			alert('form submitted');
+		}
+
+		</script>
+</body>
+</html>

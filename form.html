@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form method="get" onsubmit="validateform()">
+		<div id ='messages' style=""></div>
+		<div>
+			Username: <input type="text" name="username" id="username" placeholder="(max 6-digits: only digits)" onkeyup ="validateform()">
+		</div>	
+
+		<div>
+			Password: <input type="password" name="password" id="password">
+		</div>
+
+		<div>
+			<button>Sign up</button>
+		</div>
+
+	<script type="text/javascript">
+		//const regex_un= /^\d+a?$/;
+		const regex_un= /^[0-9]{1,6}$/;
+
+		function validateform(){
+			var usernameElement = document.forms[0].elements[0];
+			var un = usernameElement.value;
+			var is_valid_un = regex_un.test(un);
+			if (is_valid_un === false) {
+				usernameElement.style.border = '1px solid red';
+				document.getElementById('messages').innerHTML= 'Error';
+
+			}
+			else {
+				usernameElement.style.border = '';
+				document.getElementById('messages').innerHTML= '';
+			}
+		}
+	</script>
+</body>
+</html>

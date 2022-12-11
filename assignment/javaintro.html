@@ -6,10 +6,36 @@
 	<title>JS test</title>
 </head>
 <body>
-JS
-<script type="text/javascript" src="intro.js"></script>
+<h1>My first java script</h1>
+<p id="discount_display"> gvgvg</p>
+<p id="date"></p>
+<button type="button" onclick="showDate()">Click To Show Date</button>
 <script type="text/javascript">
-	document.write("Hello world")
+	function showDate()
+	{
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth();
+		var year = date.getFullYear();
+		var day_index = date.getDay();
+		if (day_index == 3){
+			document.getElementById("discount_display").innerHTML="50% Discount";
+		}
+		else{
+			document.getElementById("discount_display").innerHTML="No Discount";
+		}
+		document.getElementById("date").innerHTML = Date();
+	}
+	
 </script>
+
+
+
+<!--JS
+<script type="text/javascript">
+	alert("hi")
+</script>
+<script type="text/javascript" src= "intro.js"></script>
+-->
 </body>
 </html>

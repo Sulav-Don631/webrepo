@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alert</title>
+</head>
+<body>
+	<p id="demo"></p>
+<script type="text/javascript">
+	function show_alert(){
+		alert("hello");
+	}
+	function show_prompt(){
+		var result= prompt("what is your name?");
+		document.write("Welcome dear " +result);
+	}
+	function myfunction(){
+		let text;
+		if (confirm("press a button!") == true){
+			 text="you pressed ok";
+		}
+		else{
+			 text="you canceled";
+		}
+		document.getElementById("demo").innerHTML= text;
+	}
+
+</script>
+<button onclick="show_alert()">alert</button>
+<button onclick="show_prompt()">prompt</button>
+<button onclick="myfunction()"> confirm </button>
+</body>
+</html>

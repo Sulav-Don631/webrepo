@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Regex</title>
+</head>
+<body>
+	<h1>what is regex?</h1>
+	<br/><p>Regular expressions are patterns used to match character combinations in strings. In JavaScript, regular expressions are also objects. These patterns are used with the exec() and test() methods of RegExp , and with the match() , matchAll() , replace() , replaceAll() , search() , and split() methods of String .
+</body>
+	<script type="text/javascript">
+		var str= "EduBca";
+		var regEX= /^[A-Za-z]/;
+		var res ="false";
+		if(str.match(regEx)){
+			res= "true";
+		}
+		alert(res);
+	</script>
+</html>

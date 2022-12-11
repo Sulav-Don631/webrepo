@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Objects</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		// Create Direct instance of Objects
+		var ram = new object();
+		ram.nam="ram";
+		ram.age=45;
+		function sayhi()
+		{
+			document.write("HI");
+		}
+		ram.hi = sayhi();
+
+		//In literal way
+
+		var shyam = {name:"ram silwal", age:15, hi=sayhi()}
+
+
+		//Creating an Object Constructor
+
+		function person(name,age)
+		{
+			this.name = name;
+			this.age = age;
+		}
+		var ram = new person ('ram ', 45)
+		var hari= new person('hari', 55)
+	</script>
+</body>
+</html>
